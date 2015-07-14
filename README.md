@@ -1,3 +1,67 @@
+User Stories (Version 1)
+------------
+
+```
+	As a coffee selling hipster
+	So that my hipster customers will remember where they got this receipt
+	I would like my till receipt to show the name of my hipster coffee shop
+
+	As a coffee selling hipster
+	So that my hipster customers can see what they've ordered
+	I would like my till receipt to show each hipster item they've ordered
+
+	As a coffee selling hipster
+	So that my hipster customers can see what they've ordered
+	I would like my till receipt to show the price alongside each hipster item they've ordered
+
+	As a coffee selling hipster
+	So that I can charge my hipster customers the right amount
+	I would like my till receipt to show me the total that my hipster customers owe
+
+	As a coffee selling hipster
+	So that I can adhere to the not-quite-hipster law
+	I would like my till receipt to have a not-too-hipster 8.64% tax added on
+```
+
+
+
+
+
+
+Testing
+-------
+
+Tested in Jasmine! To run Jasmine tests from the command line, navigate to the folder that the SpecRunner.html is in and run the command "open SpecRunner.html" to run the Jasmine tests.
+
+
+CURRENTLY WANT TO GET TRAVIS WORKING FOR JAVASCRIPT BUILDS - have bookmarked pages for later
+
+
+
+
+
+
+
+
+
+User Stories (Version 2)
+------------
+
+```
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 Till tech test
 ==============
 
@@ -37,6 +101,7 @@ Version 2
 
 - Add functionality to take payment and calculate correct change.  
 - Add functionality to handle discounts - in this example, a 5% discount on orders over $50, and a 10% muffin discount.
+- Add functionality to print date and time on receipt
 
 Version 3
 ---------
