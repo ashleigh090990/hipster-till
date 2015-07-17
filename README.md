@@ -1,7 +1,7 @@
 Till
 ====
 
-![screenshot of page](/images/receipt.jpg)
+![screenshot of page](/images/Screen Shot 2015-07-17 at 15.04.24.png)
 
 Till tech test
 ==============
@@ -120,8 +120,6 @@ You may have to install npm and bower before installing the dependencies.
 
 To run the Jasmine tests from the command line, navigate to the folder that the SpecRunner.html is in and run the command "open SpecRunner.html" to run the Jasmine tests (they are all passing, but for some reason when running these same Jasmine tests throuh Karma, 6 fail as '.includes()' is not recognised as a method? Will be looking into that, as I want to get these tests running for Travis).
 
-To run the Protractor tests, run "protractor spec/e2e/conf.js" from the command line. <<< NOT RUNNING SIMPLE TESTS... CHECK ON THIS
-
 To run the application, in one terminal tab:
 
 ```
@@ -135,3 +133,5 @@ $ http-server ./
 ```
 
 Then in Google Chrome, navigate to "http://localhost:8080/" and the application should load!
+
+To run the Protractor tests, run "protractor spec/e2e/conf.js" from the command line (with webdriver-manager and http-server open). <<< NOT RUNNING SIMPLE TESTS... CHECK ON THIS
