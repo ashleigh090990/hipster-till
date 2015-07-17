@@ -1,66 +1,7 @@
-User Stories (Version 1)
-------------
+Till
+====
 
-```
-	As a coffee selling hipster
-	So that my hipster customers will remember where they got this receipt
-	I would like my till receipt to show the name of my hipster coffee shop
-
-	As a coffee selling hipster
-	So that my hipster customers can see what they've ordered
-	I would like my till receipt to show each hipster item they've ordered
-
-	As a coffee selling hipster
-	So that my hipster customers can see what they've ordered
-	I would like my till receipt to show the price alongside each hipster item they've ordered
-
-	As a coffee selling hipster
-	So that I can charge my hipster customers the right amount
-	I would like my till receipt to show me the total that my hipster customers owe
-
-	As a coffee selling hipster
-	So that I can adhere to the not-quite-hipster law
-	I would like my till receipt to have a not-too-hipster 8.64% tax added on
-```
-
-
-
-
-
-
-Testing
--------
-
-Tested in Jasmine! To run Jasmine tests from the command line, navigate to the folder that the SpecRunner.html is in and run the command "open SpecRunner.html" to run the Jasmine tests.
-
-
-CURRENTLY WANT TO GET TRAVIS WORKING FOR JAVASCRIPT BUILDS - have bookmarked pages for later
-
-
-
-
-
-
-
-
-
-User Stories (Version 2)
-------------
-
-```
-```
-
-
-
-
-
-
-
-
-
-
-
-
+![screenshot of page](/images/receipt.jpg)
 
 Till tech test
 ==============
@@ -75,7 +16,6 @@ Specification
 This is what a sample receipt looks like:
 
 ![a receipt](/images/receipt.jpg)
-
 
 Version 1
 ---------
@@ -109,3 +49,89 @@ Version 3
 Implement an user interface that can actually be used as a till.
 
 You may use whatever technologies you see fit.
+
+User Stories (Version 1)
+------------
+
+```
+	As a coffee selling hipster
+	So that my hipster customers will remember where they got this receipt
+	I would like my till receipt to show the name of my hipster coffee shop
+
+	As a coffee selling hipster
+	So that my hipster customers can see what they've ordered
+	I would like my till receipt to show each hipster item they've ordered
+
+	As a coffee selling hipster
+	So that my hipster customers can see what they've ordered
+	I would like my till receipt to show the price alongside each hipster item they've ordered
+
+	As a coffee selling hipster
+	So that I can charge my hipster customers the right amount
+	I would like my till receipt to show me the total that my hipster customers owe
+
+	As a coffee selling hipster
+	So that I can adhere to the not-quite-hipster law
+	I would like my till receipt to have a not-too-hipster 8.64% tax added on
+```
+
+User Stories (Version 2)
+------------
+
+```
+	As a helpful hipster coffee seller
+	So that I don't shortchange my hipster customers
+	I would like my till receipt to show how much my hipster customers have paid and how much change they are owed
+
+	As a business-minded hipster coffee seller
+	So that my hipster customers can enjoy the financial perks of my super hipster coffee shop
+	I would like to give them a 5% discount on orders over £50
+
+	As a business-minded hipster coffee seller
+	So that my hipster customers can enjoy the financial perks of my super hipster coffee shop
+	I would like to give them a 10% discount on their total order price when they buy a muffin
+
+Still To Do:
+
+As a time travelling hipster coffee lord
+So that my hipster customers and I can keep track of our history together
+I would like my receipt to print the date and time that their hipster order was made
+```
+
+Tech Used
+---------
+Written in Javascript and AngularJS, and tested in Jasmine and Protractor.
+
+To Run
+-------
+Navigate to any folder and in the command line:
+
+```
+$ git clone https://github.com/ashleigh090990/till_tech_test
+
+$ cd till_tech_test
+
+$ npm install
+
+$ bower install
+```
+
+You may have to install npm and bower before installing the dependencies.
+
+To run the Jasmine tests from the command line, navigate to the folder that the SpecRunner.html is in and run the command "open SpecRunner.html" to run the Jasmine tests (they are all passing, but for some reason when running these same Jasmine tests throuh Karma, 6 fail as '.includes()' is not recognised as a method? Will be looking into that, as I want to get these tests running for Travis).
+
+To run the Protractor tests, run "protractor spec/e2e/conf.js" from the command line. <<< NOT RUNNING SIMPLE TESTS... CHECK ON THIS
+
+To run the application, in one terminal tab:
+
+```
+$ webdriver-manager start
+```
+
+And in another terminal tab:
+
+```
+$ http-server ./
+```
+
+Then in Google Chrome, navigate to "http://localhost:8080/" and the application should load!
