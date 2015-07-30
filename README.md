@@ -1,7 +1,7 @@
 Till
 ====
 
-![screenshot of page](/images/receipt.jpg)
+![screenshot of page](/images/screenshot of app page.png)
 
 Till tech test
 ==============
