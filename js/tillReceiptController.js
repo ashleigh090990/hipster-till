@@ -82,6 +82,7 @@ tillReceiptApp.controller('TillReceiptController',[function() {
   };
 
   self.calcOrderTotalBeforeTax = function() {
+    self.confirmedPreTaxOrderTotal = 0;
     for (i=0; i<self.individualOrderPrices.length; i++) {
       self.roundToTwoDP(self.calcOrderTotalBeforeDiscount());
     };
