@@ -1,11 +1,15 @@
 describe('Till receipt page', function() {
   var cafeLatteOptionSelected = element(by.cssContainingText('option', 'Cafe Latte'));
+  var cappucinoOptionSelected = element(by.cssContainingText('option', 'Cappucino'));
+  var tiramisuOptionSelected = element(by.cssContainingText('option', 'Tiramisu'));
+  var muffinOptionSelected = element(by.cssContainingText('option', 'Chocolate Chip Muffin'));
+  var quantityOfFiveSelected = element(by.cssContainingText('option', '5'));
   var quantityOfTwoSelected = element(by.cssContainingText('option', '2'));
   var quantityOfOneSelected = element(by.cssContainingText('option', '1'));
   var addItemToOrder = element(by.id('addToOrderBtn'));
   var preTaxTotal = element(by.id('preTaxTotal'));
   var taxTotal = element(by.id('taxTotal'));
-  var cappucinoOptionSelected = element(by.cssContainingText('option', 'Cappucino'));
+  var postTaxTotal = element(by.id('postTaxTotal'));
 
   beforeEach(function() {
     browser.get('http://localhost:8080');
@@ -41,5 +45,21 @@ describe('Till receipt page', function() {
     expect(element(by.css('.receipt')).getText()).toContain('Cappucino £ 3.85')
   });
 
-  // add tests for the calculation of discounts...
+  it('should calculate the discount when the order is over £50', function() {
+    tiramisuOptionSelected.click();
+    quantityOfFiveSelected.click();
+    addItemToOrder.click();
+    expect(preTaxTotal.getText()).toEqual('£ 54.15');
+    expect(taxTotal.getText()).toEqual('£ 4.68');
+    expect(element(by.id('postTaxTotal')).getText()).toEqual('£ 58.83');
+  });
+
+  it('should calculate the discount when a muffin is added to the order', function() {
+    muffinOptionSelected.click();
+    quantityOfOneSelected.click();
+    addItemToOrder.click();
+    expect(preTaxTotal.getText()).toEqual('£ 3.65');
+    expect(taxTotal.getText()).toEqual('£ 0.32');
+    expect(postTaxTotal.getText()).toEqual('£ 3.97');
+  });
 });

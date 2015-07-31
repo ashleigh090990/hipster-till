@@ -50,30 +50,30 @@
     <table>
       <tr ng-model="mainCtrl.individualOrderItems" ng-repeat="item in mainCtrl.individualOrderItems track by $index">
         <td class="leftColumn">{{item}}</td>
-        <td>£ {{mainCtrl.items[item]}}</td>
+        <td class="righttColumn">£ {{mainCtrl.items[item]}}</td>
       </tr>
     </table>
     <br>
     <table>
       <tr>
         <td class="leftColumn">Total:</td>
-        <td id="preTaxTotal">£ {{mainCtrl.confirmedPreTaxOrderTotal}}</td>
+        <td class="righttColumn" id="preTaxTotal">£ {{mainCtrl.confirmedPreTaxOrderTotal}}</td>
       </tr>
       <tr>
         <td class="leftColumn">Tax:</td>
-        <td id="taxTotal">£ {{mainCtrl.calculatedTax}}</td>
+        <td class="righttColumn" id="taxTotal">£ {{mainCtrl.calculatedTax}}</td>
       </tr>
       <tr>
         <td class="leftColumn">Total with Tax:</td>
-        <td id="postTaxTotal">£ {{mainCtrl.confirmedPostTaxOrderTotal}}</td>
+        <td class="righttColumn" id="postTaxTotal">£ {{mainCtrl.confirmedPostTaxOrderTotal}}</td>
       </tr>
       <tr>
         <td class="leftColumn" >Cash:</td>
-        <td>£ {{amountPaid}}<span ng-if="">0</span></td>
+        <td class="righttColumn">£ {{amountPaid}}<span ng-if="">0</span></td>
       </tr>
       <tr>
         <td class="leftColumn">Change Due:</td>
-        <td ng-model="amountPaid">£ {{mainCtrl.changeDueToCustomer}}</td>
+        <td class="righttColumn" ng-model="amountPaid">£ {{mainCtrl.changeDueToCustomer}}</td>
       </tr>
     </table>
     <br>
