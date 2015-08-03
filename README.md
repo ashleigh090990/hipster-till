@@ -77,9 +77,9 @@ Running the App Locally
 Navigate to any folder and in the command line:
 
 ```
-$ git clone https://github.com/ashleigh090990/till_tech_test
+$ git clone https://github.com/ashleigh090990/hipster-till
 
-$ cd till_tech_test
+$ cd hipster-till
 
 $ npm install
 
